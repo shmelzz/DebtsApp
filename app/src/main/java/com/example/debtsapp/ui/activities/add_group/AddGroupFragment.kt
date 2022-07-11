@@ -40,6 +40,10 @@ class AddGroupFragment : DialogFragment() {
         }
 
         binding.addActivityMembersBtn.setOnClickListener {
+            val dialog = AddMembersDialog()
+            activity?.supportFragmentManager?.let {
+                dialog.show(it, "members")
+            }
             binding.addActivityMembersTv.visibility = TextView.VISIBLE
         }
 

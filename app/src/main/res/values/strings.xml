@@ -6,11 +6,12 @@
     <string name="username">name</string>
     <string name="login">login</string>
     <string name="sign_up">sign up</string>
-    <string name="members">Members</string>
     <string name="title">Title</string>
     <string name="sum">Sum</string>
     <string name="add_members">Add members</string>
     <string name="password">password</string>
     <string name="ok">ok</string>
     <string name="add">add</string>
+    <string name="members">Members</string>
+    <string name="friends">Friends</string>
 </resources>
