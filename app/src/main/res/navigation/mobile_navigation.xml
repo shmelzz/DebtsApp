@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_groups"
-        android:name="com.example.debtsapp.ui.groups.GroupsFragment"
+        android:name="com.example.debtsapp.ui.activities.GroupsFragment"
         android:label="@string/title_groups"
-        tools:layout="@layout/fragment_groups" />
+        tools:layout="@layout/fragment_activities" />
 
     <fragment
         android:id="@+id/navigation_notifications"

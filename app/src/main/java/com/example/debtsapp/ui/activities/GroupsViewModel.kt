@@ -1,4 +1,4 @@
-package com.example.debtsapp.ui.groups
+package com.example.debtsapp.ui.activities
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
