@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.debtsapp.databinding.FragmentActivitiesBinding
+import com.example.debtsapp.models.User
 import com.example.debtsapp.ui.activities.add_group.AddGroupFragment
 
 
@@ -33,7 +35,29 @@ class GroupsFragment : Fragment() {
             showDialog()
         }
 
+        binding.activitiesListRv.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = GroupAdapter(createTestList()) {
+//                val openURL = Intent(Intent.ACTION_VIEW)
+//                openURL.data = Uri.parse(articleList[it].link)
+//                startActivity(openURL)
+            }
+        }
+
         return root
+    }
+
+    // TODO: replace
+    private fun createTestList(): ArrayList<com.example.debtsapp.models.Activity> {
+        return arrayListOf(
+            com.example.debtsapp.models.Activity(0, "test", 0, User(0, "test user 0"), 789),
+            com.example.debtsapp.models.Activity(1, "test", 1, User(0, "test user 1"), 4567),
+            com.example.debtsapp.models.Activity(0, "test", 0, User(0, "test user 0"), 789),
+            com.example.debtsapp.models.Activity(1, "test", 1, User(0, "test user 1"), 4567),
+            com.example.debtsapp.models.Activity(0, "test", 0, User(0, "test user 0"), 789),
+            com.example.debtsapp.models.Activity(1, "test", 1, User(0, "test user 1"), 4567),
+            com.example.debtsapp.models.Activity(0, "test", 0, User(0, "test user 0"), 789),
+        )
     }
 
     override fun onDestroyView() {
@@ -50,6 +74,5 @@ class GroupsFragment : Fragment() {
             ?.add(android.R.id.content, newFragment)
             ?.addToBackStack(null)
             ?.commit()
-
     }
 }
