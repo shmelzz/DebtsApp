@@ -3,16 +3,17 @@
     <string name="title_home">Account</string>
     <string name="title_groups">Activities</string>
     <string name="title_notifications">Notifications</string>
-    <string name="username">name</string>
+    <string name="username">Username</string>
     <string name="login">login</string>
     <string name="sign_up">sign up</string>
     <string name="title">Title</string>
     <string name="sum">Sum</string>
     <string name="add_members">Add members</string>
-    <string name="password">password</string>
-    <string name="ok">ok</string>
+    <string name="password">Password</string>
+    <string name="ok">OK</string>
     <string name="add">add</string>
     <string name="members">Members</string>
     <string name="friends">Friends</string>
     <string name="activities">Activities</string>
+    <string name="split_the_bill">Split the bill</string>
 </resources>

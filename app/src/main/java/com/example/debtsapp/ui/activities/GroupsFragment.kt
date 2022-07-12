@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.debtsapp.R
 import com.example.debtsapp.databinding.FragmentActivitiesBinding
 import com.example.debtsapp.models.User
 import com.example.debtsapp.ui.activities.add_group.AddGroupFragment
@@ -32,15 +34,16 @@ class GroupsFragment : Fragment() {
         val root: View = binding.root
 
         binding.addGroupButton.setOnClickListener {
-            showDialog()
+            showAddActivityDialog()
+            // val navController = Navigation.findNavController(root)
+            // navController.navigate(R.id.action_navigation_groups_to_addGroupFragment2)
         }
 
         binding.activitiesListRv.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = GroupAdapter(createTestList()) {
-//                val openURL = Intent(Intent.ACTION_VIEW)
-//                openURL.data = Uri.parse(articleList[it].link)
-//                startActivity(openURL)
+                val navController = Navigation.findNavController(root)
+                navController.navigate(R.id.action_navigation_groups_to_navigation_activity_info)
             }
         }
 
@@ -65,7 +68,7 @@ class GroupsFragment : Fragment() {
         _binding = null
     }
 
-    private fun showDialog() {
+    private fun showAddActivityDialog() {
         val fragmentManager = activity?.supportFragmentManager
         val newFragment = AddGroupFragment()
         val transaction = fragmentManager?.beginTransaction()

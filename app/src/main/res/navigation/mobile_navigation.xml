@@ -15,11 +15,30 @@
         android:id="@+id/navigation_groups"
         android:name="com.example.debtsapp.ui.activities.GroupsFragment"
         android:label="@string/title_groups"
-        tools:layout="@layout/fragment_activities" />
+        tools:layout="@layout/fragment_activities">
+        <action
+            android:id="@+id/action_navigation_groups_to_navigation_activity_info"
+            app:destination="@id/navigation_activity_info" />
+        <action
+            android:id="@+id/action_navigation_groups_to_addGroupFragment2"
+            app:destination="@id/addGroupFragment2" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.debtsapp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_activity_info"
+        android:name="com.example.debtsapp.ui.activities.activity_info.ActivityInfoFragment"
+        android:label="activity info"
+        tools:layout="@layout/fragment_activity_info" />
+
+    <dialog
+        android:id="@+id/addGroupFragment2"
+        android:name="com.example.debtsapp.ui.activities.add_group.AddGroupFragment"
+        android:label="AddGroupFragment"
+        tools:layout="@layout/dialog_add_activity" />
 </navigation>
